@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import styles from "./infromation.module.scss"
+import Link from "next/link";
 
 
 export default function Information() {
@@ -16,19 +17,19 @@ export default function Information() {
                         <div className={styles.container__image}>
                             <Image src={"/images/shelterz.svg"} width={0} height={0} alt=""></Image>
                         </div>
-                        <div className={styles.container__subtitle}>shelterz.ru</div>
+                        <Link className={styles.container__subtitle} href={"https://shelterz.ru/"}>shelterz.ru</Link>
                     </div>
                     <div className={styles.container__item}>
                         <div className={styles.container__image}>
                             <Image src={"/images/money.svg"} width={0} height={0} alt=""></Image>
                         </div>
-                        <div className={styles.container__subtitle}>moneytasks.ru</div>
+                        <Link className={styles.container__subtitle} href={"https://moneytasks.ru/"}>moneytasks.ru</Link>
                     </div>
                     <div className={styles.container__item}>
                         <div className={styles.container__image}>
                             <Image src={"/images/star.svg"} width={0} height={0} alt=""></Image>
                         </div>
-                        <div className={styles.container__subtitle}>otzyvshop.ru</div>
+                        <Link className={styles.container__subtitle} href={"https://otzyvshop.ru/"}>otzyvshop.ru</Link>
                     </div>
                 </div>
             </div>
