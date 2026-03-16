@@ -82,6 +82,8 @@
   border-radius: 40px;
   font-size: 1.04vw;
   font-weight: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   color: #fff4d5;
 }
 @media (max-width: 900px) {
@@ -164,6 +166,8 @@
   font-size: 3.1vw;
   font-weight: 400;
   padding: 2%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   color: #fff4d5;
 }
 .main__login:hover {
