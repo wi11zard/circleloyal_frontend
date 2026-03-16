@@ -67,6 +67,12 @@
     font-size: 16px;
     color: $color-beige;
     text-decoration: none;
+    transition: 0.3s ease;
+
+    &:hover {
+      text-shadow: 0 0 2px currentColor;
+      text-shadow: 0 0 2px currentColor;
+    }
   }
 
   &__image {

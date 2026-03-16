@@ -107,6 +107,11 @@
   font-size: 16px;
   text-align: center;
   margin: 0 auto;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.header__link:hover {
+  text-shadow: 0 0 2px currentColor, 0 0 1px currentColor;
 }
 .header__user {
   display: -webkit-box;
@@ -183,11 +188,16 @@
   font-size: 16px;
   color: #fff4d5;
   text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 @media (max-width: 900px) {
   .header__link {
     font-size: 3.1vw;
   }
+}
+.header__link:hover {
+  text-shadow: 0 0 2px currentColor, 0 0 1px currentColor;
 }
 .header__element {
   display: -webkit-box;

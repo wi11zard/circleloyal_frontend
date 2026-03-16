@@ -66,6 +66,10 @@
     @media (max-width: 900px) {
       display: none;
     }
+
+    &:hover {
+      transform: translateY(-5%);
+    }
   }
 
   &__image {
@@ -142,6 +146,10 @@
     font-weight: 400;
     padding: 2%;
     color: $color-beige;
+
+    &:hover {
+      transform: translateY(-5%);
+    }
   }
 
   &__container2 {
@@ -460,9 +468,14 @@
     font-weight: 400;
     text-decoration: none;
     color: $color-black;
+    transition: 0.3s ease;
 
     @media (max-width: 880px) {
       font-size: 2.56vw;
+    }
+
+    &:hover {
+      text-shadow: 0 0 1px currentColor;
     }
   }
 }
@@ -708,6 +721,7 @@
   );
   color: $color-beige;
   font-size: 1.08vw;
+  transition: 0.3s ease;
   cursor: pointer;
 
   @media (max-width: 900px) {
@@ -975,6 +989,7 @@
   font-weight: 400;
   border-radius: 40px;
   background: $color-purple;
+  transition: 0.3s ease;
   background: linear-gradient(
     90deg,
     rgba(105, 77, 176, 1) 0%,
@@ -985,6 +1000,10 @@
   color: $color-beige;
   font-size: 0.95vw;
   cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5%);
+  }
 }
 
 .transferRules {
@@ -993,6 +1012,12 @@
   font-size: 0.8vw;
   color: $color-beige;
   text-underline-offset: 3px;
+  transition: 0.3s ease;
+
+  &:hover {
+    text-shadow: 0 0 2px currentColor;
+    text-shadow: 0 0 2px currentColor;
+  }
 }
 
 @media (max-width: 880px) {
@@ -1096,11 +1121,21 @@
     width: 100%;
     padding: 2.5%;
     font-size: 3.8vw;
+
+    &:hover {
+      transform: translateY(-5%);
+    }
   }
 
   .transferRules {
     font-size: 3.2vw;
     padding-top: 1%;
     text-underline-offset: 4px;
+    transition: 0.3s ease;
+
+    &:hover {
+      text-shadow: 0 0 2px currentColor;
+      text-shadow: 0 0 2px currentColor;
+    }
   }
 }

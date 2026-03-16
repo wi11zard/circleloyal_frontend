@@ -96,6 +96,13 @@
     font-size: 16px;
     text-align: center;
     margin: 0 auto;
+    transition: 0.3s ease;
+
+    &:hover {
+      text-shadow:
+        0 0 2px currentColor,
+        0 0 1px currentColor;
+    }
   }
 
   &__user {
@@ -164,9 +171,16 @@
     font-size: 16px;
     color: $color-beige;
     text-decoration: none;
+    transition: 0.3s ease;
 
     @media (max-width: 900px) {
       font-size: 3.1vw;
+    }
+
+    &:hover {
+      text-shadow:
+        0 0 2px currentColor,
+        0 0 1px currentColor;
     }
   }
 

@@ -96,9 +96,14 @@
     text-decoration: none;
     font-weight: 600;
     color: $color-black;
+    transition: 0.3s ease;
 
     @media (max-width: 700px) {
       font-size: 3.33vw;
+    }
+
+    &:hover {
+      text-shadow: 0 0 1px currentColor;
     }
   }
 
@@ -179,6 +184,7 @@
     margin: 0 auto;
     margin-top: 2%;
     background: $color-purple;
+    transition: 0.3s ease;
     background: linear-gradient(
       90deg,
       rgba(105, 77, 176, 1) 0%,
@@ -190,6 +196,10 @@
       font-size: 3.53vw;
       padding: 1.5%;
       width: 70%;
+    }
+
+    &:hover {
+      transform: translateY(-5%);
     }
   }
 }

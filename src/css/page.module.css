@@ -89,6 +89,11 @@
     display: none;
   }
 }
+.main__button:hover {
+  -webkit-transform: translateY(-5%);
+      -ms-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
 .main__image {
   width: 35%;
   margin-left: -3%;
@@ -160,6 +165,11 @@
   font-weight: 400;
   padding: 2%;
   color: #fff4d5;
+}
+.main__login:hover {
+  -webkit-transform: translateY(-5%);
+      -ms-transform: translateY(-5%);
+          transform: translateY(-5%);
 }
 .main__container2 {
   display: -webkit-box;
@@ -526,11 +536,16 @@
   font-weight: 400;
   text-decoration: none;
   color: #040306;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 @media (max-width: 880px) {
   .main__translation {
     font-size: 2.56vw;
   }
+}
+.main__translation:hover {
+  text-shadow: 0 0 1px currentColor;
 }
 
 .modalOverlay {
@@ -818,6 +833,8 @@
   background: linear-gradient(90deg, rgb(105, 77, 176) 0%, rgb(130, 95, 219) 50%, rgb(105, 77, 176) 100%);
   color: #fff4d5;
   font-size: 1.08vw;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   cursor: pointer;
 }
 @media (max-width: 900px) {
@@ -1133,11 +1150,18 @@
   font-weight: 400;
   border-radius: 40px;
   background: #694db0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   background: -webkit-gradient(linear, left top, right top, from(rgb(105, 77, 176)), color-stop(50%, rgb(130, 95, 219)), to(rgb(105, 77, 176)));
   background: linear-gradient(90deg, rgb(105, 77, 176) 0%, rgb(130, 95, 219) 50%, rgb(105, 77, 176) 100%);
   color: #fff4d5;
   font-size: 0.95vw;
   cursor: pointer;
+}
+.transferSubmit:hover {
+  -webkit-transform: translateY(-5%);
+      -ms-transform: translateY(-5%);
+          transform: translateY(-5%);
 }
 
 .transferRules {
@@ -1146,6 +1170,12 @@
   font-size: 0.8vw;
   color: #fff4d5;
   text-underline-offset: 3px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.transferRules:hover {
+  text-shadow: 0 0 2px currentColor;
+  text-shadow: 0 0 2px currentColor;
 }
 
 @media (max-width: 880px) {
@@ -1246,9 +1276,20 @@
     padding: 2.5%;
     font-size: 3.8vw;
   }
+  .transferSubmit:hover {
+    -webkit-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
   .transferRules {
     font-size: 3.2vw;
     padding-top: 1%;
     text-underline-offset: 4px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .transferRules:hover {
+    text-shadow: 0 0 2px currentColor;
+    text-shadow: 0 0 2px currentColor;
   }
 }

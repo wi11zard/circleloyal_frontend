@@ -245,7 +245,7 @@ export default function Home() {
                     <span className={styles.transferIcon}>
                       <Image src="/images/money2.svg" alt="" width={20} height={20} />
                     </span>
-                    <input autoComplete="off" type="number" className={styles.transferInput} placeholder="00.00" />
+                    <input autoComplete="off" min="0" type="number" className={styles.transferInput} placeholder="00.00" />
                   </div>
                 </div>
         

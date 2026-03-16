@@ -112,11 +112,16 @@
   text-decoration: none;
   font-weight: 600;
   color: #040306;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 @media (max-width: 700px) {
   .container__subtitle {
     font-size: 3.33vw;
   }
+}
+.container__subtitle:hover {
+  text-shadow: 0 0 1px currentColor;
 }
 .container__information {
   display: -webkit-box;
@@ -197,6 +202,8 @@
   margin: 0 auto;
   margin-top: 2%;
   background: #694db0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   background: -webkit-gradient(linear, left top, right top, from(rgb(105, 77, 176)), color-stop(50%, rgb(130, 95, 219)), to(rgb(105, 77, 176)));
   background: linear-gradient(90deg, rgb(105, 77, 176) 0%, rgb(130, 95, 219) 50%, rgb(105, 77, 176) 100%);
 }
@@ -206,4 +213,9 @@
     padding: 1.5%;
     width: 70%;
   }
+}
+.container__button:hover {
+  -webkit-transform: translateY(-5%);
+      -ms-transform: translateY(-5%);
+          transform: translateY(-5%);
 }
