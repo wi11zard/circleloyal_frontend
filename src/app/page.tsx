@@ -1,19 +1,50 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import Information from "../components/information/information";
 import styles from "./page.module.scss"
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
+  const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+  if (isModalOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (isTransferModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isTransferModalOpen]);
+
   return (
     <>
       <Header />
-      <main className={styles.main}>
-        <div className={styles.main__container}> {/*СТРАНИЦА ВХОДА*/}
-          <div className={styles.main__titles}>
+     <main className={styles.main}>
+      {/* <div className={styles.main__container}>
+       <div className={styles.main__titles}>
             <div className={styles.main__title}>Единый аккаунт для всех сервисов</div>
-            <button className={styles.main__button}>Войти</button>
+            <button onClick={() => setIsModalOpen(true)} className={styles.main__button}>Войти</button>
           </div>
           <div className={styles.main__image}>
             <Image src={"/images/blocked.png"} alt="" width={500} height={300}></Image>
@@ -25,12 +56,76 @@ export default function Home() {
             <div className={styles.main__backgroundmob}>
               <Image src={"/images/background2.png"} alt="" width={300} height={300}></Image>
             </div>
-            <button className={styles.main__login}>Войти</button>
+             <button onClick={() => setIsModalOpen(true) } className={styles.main__login}>Войти</button>
           </div>
         </div>  
 
-        {/* <div className={styles.main__container2}> */}
-        {/* <div className={styles.main__card}>
+         {isModalOpen && (
+          <div
+            className={styles.modalOverlay}
+            onClick={() => setIsModalOpen(false)}
+          >
+            <div
+              className={styles.modal}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className={styles.mobcontainer2}>
+                 <div className={styles.moblogo2}>
+                  <Image src={"/images/logo.svg"} alt="" width={0} height={0}></Image>
+                </div>
+
+                <button
+                  className={styles.modalClose}
+                  onClick={() => setIsModalOpen(false)}
+                >
+                  <Image src={"/images/back.svg"} alt="" width={40} height={40}></Image>
+                </button>
+              </div>
+              <h2 className={styles.modalTitle}>Авторизация</h2>
+             
+
+                <div className={styles.mobline1}>
+                <Image src={"/images/line.png"} alt="" width={0} height={1}></Image>
+              </div>
+
+              <div className={styles.modalField}>
+                <label className={styles.modalLabel}>Почта</label>
+                <div className={styles.gmail}>
+                  <Image src={"/images/user3.svg"} alt="" height={0} width={0}></Image>
+                </div>
+                <input
+                  type="email"
+                  placeholder="login@mail.ru"
+                  autoComplete="off"
+                  className={styles.modalInput}
+                />
+              </div>
+
+              <div className={styles.modalField}>
+                <label className={styles.modalLabel}>Пароль</label>
+                <div className={styles.password}>
+                  <Image src={"/images/password.svg"} alt="" height={0} width={0}></Image>
+                </div>
+                <input
+                  autoComplete="off"
+                  type="password"
+                  placeholder="••••••••"
+                  className={styles.modalInput}
+                />
+              </div>
+
+              <a href="#" className={styles.modalForgot}>
+                Не помню пароль
+              </a>
+
+              <button className={styles.modalSubmit}>Войти</button>
+            </div>
+          </div>
+        )}
+    */}
+
+        <div className={styles.main__container2}>
+        <div className={styles.main__card}>
             <div className={styles.main__union}>
               <Image src={"/images/union.svg"} alt="" width={0} height={0}></Image>
             </div>
@@ -69,7 +164,7 @@ export default function Home() {
               <div className={styles.main__icon2}>
                 <Image src={"/images/translation.svg"} alt="" width={50} height={50}></Image>
               </div>
-              <Link className={styles.main__translation} href={"/"}>Перевод</Link>
+              <button onClick={() => setIsTransferModalOpen(true)}  className={styles.main__translation}>Переводы</button>
             </div>
             <div className={styles.main__item2}>
               <div className={styles.main__icon2}>
@@ -90,9 +185,124 @@ export default function Home() {
               <Link className={styles.main__translation} href={"/"}>Кешбек</Link>
             </div>
           </div>
-        </div>  */}
+        </div> 
 
-        {/* <div className={styles.main__container2}>
+        {isTransferModalOpen && (
+          <div
+            className={styles.transferOverlay}
+            onClick={() => setIsTransferModalOpen(false)}
+          >
+            <div
+              className={styles.transferModal}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className={styles.transferClose}
+                onClick={() => setIsTransferModalOpen(false)}
+                aria-label="Закрыть"
+                type="button"
+              >
+                <Image src={"/images/back.svg"} alt="" width={0} height={0}></Image>
+              </button>
+        
+              <div className={styles.transferHeader}>
+                <div className={styles.transferTitle}>Перевод баллов</div>
+                <div className={styles.transferSubtitle}>
+                  Переведите баллы на карту другого пользователя
+                </div>
+              </div>
+        
+              <div className={styles.transferGrid}>
+                <div className={styles.transferField}>
+                  <div className={styles.transferLabel}>Номер карты получателя</div>
+                  <div className={styles.transferInputWrap}>
+                    <span className={styles.transferIcon}>
+                      <Image src="/images/card.svg" alt="" width={20} height={20} />
+                    </span>
+                    <input
+                      autoComplete="off"
+                      type="password"
+                      className={styles.transferInput}
+                      placeholder="•  •  •  •ㅤ   •  •  •  •ㅤ   •  •  •  •"
+                    />
+                  </div>
+                </div>
+        
+                <div className={styles.transferField}>
+                  <div className={styles.transferLabel}>Получатель</div>
+                  <div className={styles.transferInputWrap}>
+                    <span className={styles.transferIcon}>
+                      <Image src="/images/user3.svg" alt="" width={20} height={20} />
+                    </span>
+                    
+                    <input autoComplete="off" className={styles.transferInput2} placeholder="ID" />
+                  </div>
+                </div>
+        
+                <div className={styles.transferField}>
+                  <div className={styles.transferLabel}>Сумма перевода (баллы)</div>
+                  <div className={styles.transferInputWrap}>
+                    <span className={styles.transferIcon}>
+                      <Image src="/images/money2.svg" alt="" width={20} height={20} />
+                    </span>
+                    <input autoComplete="off" type="number" className={styles.transferInput} placeholder="00.00" />
+                  </div>
+                </div>
+        
+                <div className={styles.transferField}>
+                  <div className={styles.transferLabel}>Комментарий (необязательно)</div>
+                  <div className={styles.transferInputWrap}>
+                    <span className={styles.transferIcon}>
+                      <Image src="/images/comment.svg" alt="" width={20} height={20} />
+                    </span>
+                    <input
+                      autoComplete="off"
+                      className={styles.transferInput2}
+                      placeholder="Сообщение получателю"
+                    />
+                  </div>
+                </div>
+              </div>
+        
+              <div className={styles.transferInfoBox}>
+                <div className={styles.transferInfoRow}>
+                  <div className={styles.transferInfoKey}>Доступно для перевода:</div>
+                  <div className={styles.transferInfoVal}>
+                    1000
+                    <span className={styles.transferCoin1}>
+                      <Image src="/images/logo2.svg" alt="" width={0} height={0} />
+                    </span>
+                  </div>
+                </div>
+        
+                <div className={styles.transferInfoRow}>
+                  <div className={styles.transferInfoKey}>Комиссия:</div>
+                  <div className={styles.transferInfoValSmall}>Бесплатно</div>
+                </div>
+                <div className={styles.mobline2}>
+                  <Image src={"/images/line.png"} alt="" width={0} height={1}></Image>
+                </div>
+                <div className={styles.transferInfoRow}>
+                  <div className={styles.transferInfoKey3}>Баланс после перевода:</div>
+                  <div className={styles.transferInfoVal3}>
+                    500
+                    <span className={styles.transferCoin}>
+                      <Image src="/images/logo2.svg" alt="" width={0} height={0} />
+                    </span>
+                  </div>
+                </div>
+              </div>
+        
+              <button className={styles.transferSubmit} type="button">
+                Перевести баллы
+              </button>
+        
+              <Link className={styles.transferRules} href={"/"}>Условия перевода</Link>
+            </div>
+          </div>
+        )}
+
+         {/* <div className={styles.main__container2}>
          <div className={styles.main__card}>
             <div className={styles.main__union}>
               <Image src={"/images/union.svg"} alt="" width={0} height={0}></Image>

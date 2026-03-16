@@ -14,11 +14,11 @@
   }
 
   @media (max-width: 1900px) {
+    width: 90%;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
 
   @media (max-width: 700px) {
-    width: 90%;
     grid-gap: 8vw;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }

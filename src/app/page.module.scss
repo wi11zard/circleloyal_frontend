@@ -11,14 +11,20 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding-top: 13%;
+    padding-top: 16%;
     padding-bottom: 7%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       flex-direction: column;
       justify-content: center;
       padding-top: 33%;
+      padding-bottom: 10%;
       gap: 8vw;
+      transform: translateY(10%);
+    }
+
+    @media (max-width: 1100px) {
+      padding-top: 20%;
     }
   }
 
@@ -36,7 +42,7 @@
     text-align: center;
     line-height: 120%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       font-size: 8.21vw;
       width: 90%;
     }
@@ -57,7 +63,7 @@
     font-weight: 400;
     color: $color-beige;
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -66,7 +72,7 @@
     width: 35%;
     margin-left: -3%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       display: none;
     }
 
@@ -93,7 +99,7 @@
     border-radius: 8px;
     overflow: hidden;
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       display: flex;
     }
   }
@@ -147,7 +153,12 @@
     padding-top: 13%;
     padding-bottom: 4%;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
+      width: 68%;
+      padding-top: 20%;
+    }
+
+    @media (max-width: 900px) {
       width: 68%;
       padding-top: 33%;
     }
@@ -430,8 +441,8 @@
     width: 16%;
     flex-shrink: 0;
 
-    @media (max-width: 1500px) {
-      width: 22%;
+    @media (max-width: 1200px) {
+      width: 20%;
     }
 
     @media (max-width: 880px) {
@@ -453,5 +464,643 @@
     @media (max-width: 880px) {
       font-size: 2.56vw;
     }
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  width: 47%;
+  border-radius: 8px;
+  padding: 1%;
+  padding-top: 1.5%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  background: radial-gradient(
+    circle at 0% 50%,
+    #131339,
+    #131339,
+    #141136,
+    #140d2f,
+    #0f071f,
+    #080410,
+    #040307,
+    #040306
+  );
+  color: $color-beige;
+
+  @media (max-width: 900px) {
+    width: 95%;
+    padding: 5%;
+    padding-right: 15%;
+    padding-left: 15%;
+    padding-top: 5%;
+  }
+}
+
+.mobline1 {
+  width: 130%;
+  transform: translateX(-12%);
+  padding-bottom: 3%;
+  display: none;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.mobcontainer2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 165%;
+  padding-left: 2%;
+  transform: translateX(-20%) translateY(-0%);
+  padding-right: 2%;
+
+  @media (max-width: 900px) {
+    width: 135%;
+    transform: translateX(-13%) translateY(-40%);
+    justify-content: space-between;
+    padding-top: 2%;
+  }
+}
+
+.modalClose {
+  width: 7%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  margin-bottom: 1%;
+  cursor: pointer;
+
+  @media (max-width: 900px) {
+    top: 8%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 1.89vw;
+  margin-bottom: 3%;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.modalField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.gmail {
+  width: 5.5%;
+  top: 56%;
+  left: 5%;
+  position: absolute;
+
+  @media (max-width: 900px) {
+    width: 7%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.password {
+  width: 4%;
+  top: 56%;
+  left: 6%;
+  position: absolute;
+
+  @media (max-width: 900px) {
+    width: 5%;
+    top: 58%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modalLabel {
+  font-size: 0.88vw;
+  font-weight: 400;
+  color: $color-beige2;
+  margin-left: 4%;
+
+  @media (max-width: 900px) {
+    font-size: 4.1vw;
+  }
+}
+
+.modalInput {
+  width: 100%;
+  border-radius: 40px;
+  background: transparent;
+  box-shadow: inset 3px 5px 9px 8px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: inset 3px 5px 9px 8px rgba(0, 0, 0, 0.54);
+  color: $color-beige;
+  padding: 4%;
+  padding-top: 5%;
+  padding-left: 14%;
+  border: 1px solid rgba(255, 220, 140, 0.18);
+  outline: none;
+
+  &:focus {
+    background: transparent;
+    box-shadow: inset 3px 5px 9px 8px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: inset 3px 5px 9px 8px rgba(0, 0, 0, 0.54);
+    color: $color-beige;
+  }
+
+  input:-internal-autofill-selected {
+    box-shadow: inset 3px 5px 9px 8px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: inset 3px 5px 9px 8px rgba(0, 0, 0, 0.54);
+    color: $color-beige;
+    background: transparent;
+  }
+
+  @media (max-width: 900px) {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    font-size: 3.5vw;
+  }
+
+  &::placeholder {
+    color: $color-beige2;
+    font-size: 0.92vw;
+
+    @media (max-width: 900px) {
+      font-size: 3.9vw;
+    }
+  }
+}
+
+.modalForgot {
+  display: block;
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  color: $color-beige;
+  font-size: 1vw;
+  text-underline-offset: 3px;
+
+  @media (max-width: 900px) {
+    font-size: 3.59vw;
+    text-align: end;
+    margin-bottom: 9%;
+  }
+}
+
+.moblogo2 {
+  width: 17%;
+  transform: translateY(3%);
+  display: none;
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modalSubmit {
+  width: 100%;
+  padding: 2%;
+  border: none;
+  border-radius: 40px;
+  background: $color-purple;
+  background: linear-gradient(
+    90deg,
+    rgba(105, 77, 176, 1) 0%,
+    rgba(130, 95, 219, 1) 50%,
+    rgba(105, 77, 176, 1) 100%
+  );
+  color: $color-beige;
+  font-size: 1.08vw;
+  cursor: pointer;
+
+  @media (max-width: 900px) {
+    font-size: 4.1vw;
+  }
+}
+
+.transferOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.transferModal {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  border-radius: 14px;
+  padding: 2.2% 2.4% 2%;
+  padding-bottom: 1%;
+  position: relative;
+  gap: 1vw;
+  color: #ffdc8c;
+
+  background: radial-gradient(
+    circle at 0% 50%,
+    #131339,
+    #131339,
+    #141136,
+    #140d2f,
+    #0f071f,
+    #080410,
+    #040307,
+    #040306
+  );
+
+  box-shadow: 0 0 4% rgba(0, 0, 0, 0.55);
+  border: 0.08vw solid rgba(255, 220, 140, 0.14);
+}
+
+.transferClose {
+  width: 5%;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.transferHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1%;
+  margin-bottom: 2%;
+}
+
+.transferTitle {
+  font-size: 1.67vw;
+  font-weight: 700;
+  color: $color-beige;
+}
+
+.transferSubtitle {
+  font-size: 1.04vw;
+  color: $color-beige2;
+}
+
+.transferGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1vw;
+  margin-bottom: 2%;
+}
+
+.transferField {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+
+.transferLabel {
+  font-size: 0.83vw;
+  color: $color-beige2;
+  margin-left: 4%;
+  padding-bottom: 0.5%;
+}
+
+.transferInputWrap {
+  position: relative;
+}
+
+.transferIcon {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6%;
+  height: 45%;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transferIcon :global(img) {
+  width: 100%;
+  height: 100%;
+}
+
+.transferInput {
+  width: 100%;
+  border-radius: 40px;
+  background: #131339;
+  background: linear-gradient(
+    90deg,
+    rgba(19, 19, 57, 1) 25%,
+    rgba(4, 3, 6, 1) 100%
+  );
+  box-shadow: inset 0.2vw 0.35vw 1vw 0.6vw rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: inset 0.2vw 0.35vw 1vw 0.6vw rgba(0, 0, 0, 0.54);
+  color: $color-beige;
+  border: 0.08vw solid rgba(255, 220, 140, 0.18);
+  outline: none;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-right: 6%;
+  padding-left: 13%;
+  font-size: 0.95vw;
+
+  &::placeholder {
+    color: $color-beige2;
+    font-size: 0.9vw;
+  }
+}
+
+.transferInput2 {
+  width: 100%;
+  border-radius: 40px;
+  background: transparent;
+  box-shadow: inset 0.2vw 0.35vw 1vw 0.6vw rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: inset 0.2vw 0.35vw 1vw 0.6vw rgba(0, 0, 0, 0.54);
+  color: $color-beige;
+  border: 0.08vw solid rgba(255, 220, 140, 0.18);
+  outline: none;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-right: 6%;
+  padding-left: 13%;
+  font-size: 0.95vw;
+  background: radial-gradient(
+    circle at 0% 50%,
+    #131339,
+    #131339,
+    #141136,
+    #140d2f,
+    #0f071f,
+    #080410,
+    #040307,
+    #040306
+  );
+
+  &::placeholder {
+    color: $color-beige2;
+    font-size: 0.9vw;
+  }
+}
+
+.transferInfoBox {
+  width: 60%;
+  border-radius: 8px;
+  padding: 1.5%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.08vw solid rgba(255, 220, 140, 0.14);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  margin: 2% auto 2%;
+}
+
+.mobline2 {
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.transferInfoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  padding: 1% 0;
+}
+
+.transferInfoKey {
+  font-size: 0.85vw;
+  color: $color-beige2;
+}
+
+.transferInfoVal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5vw;
+  font-size: 0.95vw;
+  font-weight: 700;
+  color: $color-beige;
+}
+
+.transferInfoKey3 {
+  font-size: 0.85vw;
+  color: $color-beige;
+}
+
+.transferInfoVal3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5vw;
+  font-size: 0.95vw;
+  font-weight: 700;
+  color: $color-beige;
+}
+
+.transferInfoValSmall {
+  font-size: 0.9vw;
+  font-weight: 600;
+  color: $color-beige;
+}
+
+.transferCoin {
+  width: 40%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.transferCoin1 {
+  width: 35%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.transferSubmit {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding: 1%;
+  border: none;
+  font-weight: 400;
+  border-radius: 40px;
+  background: $color-purple;
+  background: linear-gradient(
+    90deg,
+    rgba(105, 77, 176, 1) 0%,
+    rgba(130, 95, 219, 1) 50%,
+    rgba(105, 77, 176, 1) 100%
+  );
+
+  color: $color-beige;
+  font-size: 0.95vw;
+  cursor: pointer;
+}
+
+.transferRules {
+  padding-top: 0%;
+  text-align: center;
+  font-size: 0.8vw;
+  color: $color-beige;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 880px) {
+  .transferOverlay {
+    padding: 0%;
+  }
+
+  .transferModal {
+    width: 95%;
+    padding: 6% 5% 5%;
+    padding-bottom: 4%;
+    height: 80%;
+    overflow: scroll;
+    gap: 3vw;
+  }
+
+  .transferClose {
+    width: 6%;
+    top: 5%;
+    right: 5%;
+  }
+
+  .transferHeader {
+    gap: 0vw;
+    margin-bottom: 2%;
+    padding-top: 2%;
+  }
+
+  .transferTitle {
+    font-size: 5.6vw;
+  }
+
+  .transferSubtitle {
+    font-size: 3.4vw;
+    text-align: center;
+    width: 70%;
+  }
+
+  .transferGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 3.5vw;
+    margin-bottom: 4%;
+  }
+
+  .transferLabel {
+    font-size: 4.3vw;
+    margin-left: 6%;
+    padding-bottom: 1%;
+  }
+
+  .transferIcon {
+    width: 7%;
+    height: 45%;
+    left: 5%;
+  }
+
+  .transferInput,
+  .transferInput2 {
+    font-size: 3.6vw;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 14%;
+    padding-right: 6%;
+
+    &::placeholder {
+      font-size: 3.4vw;
+    }
+  }
+
+  .transferInfoBox {
+    width: 100%;
+    padding: 4%;
+    margin: 3% auto 4%;
+  }
+
+  .transferInfoRow {
+    padding: 2% 0;
+  }
+
+  .transferInfoKey,
+  .transferInfoKey3 {
+    font-size: 3.3vw;
+  }
+
+  .transferInfoVal,
+  .transferInfoVal3 {
+    font-size: 3.6vw;
+    gap: 1.5vw;
+  }
+
+  .transferInfoValSmall {
+    font-size: 3.3vw;
+  }
+
+  .transferCoin,
+  .transferCoin1 {
+    width: 18%;
+  }
+
+  .transferSubmit {
+    width: 100%;
+    padding: 2.5%;
+    font-size: 3.8vw;
+  }
+
+  .transferRules {
+    font-size: 3.2vw;
+    padding-top: 1%;
+    text-underline-offset: 4px;
   }
 }
