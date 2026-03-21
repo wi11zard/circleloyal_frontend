@@ -1,0 +1,30 @@
+services:
+    circleloyal-frontend:
+        cpus: 1
+        mem_limit: 8g
+        init: true
+        cap_drop:
+            - ALL
+        security_opt:
+            - no-new-privileges:true
+        pids_limit: 1024
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:?NEXT_PUBLIC_SITE_URL is required}
+                - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:?NEXT_PUBLIC_API_URL is required}
+        image: circleloyal-frontend:latest
+        container_name: circleloyal-frontend
+        restart: unless-stopped
+        env_file:
+            - .env
+        environment:
+            - NODE_ENV=production
+            - PORT=3000
+        networks:
+            - dokploy-network
+
+networks:
+    dokploy-network:
+        external: true
