@@ -44,6 +44,7 @@
   -webkit-box-shadow: -1px 4px 9px 0px rgba(128, 128, 128, 0.75);
   -moz-box-shadow: -1px 4px 9px 0px rgba(128, 128, 128, 0.75);
   border-radius: 15px;
+  background-color: #f1edf8;
 }
 @media (max-width: 700px) {
   .container__spend {
@@ -138,6 +139,7 @@
   -webkit-box-shadow: -1px 4px 9px 0px rgba(128, 128, 128, 0.75);
   -moz-box-shadow: -1px 4px 9px 0px rgba(128, 128, 128, 0.75);
   border-radius: 15px;
+  background-color: #f1edf8;
 }
 @media (max-width: 700px) {
   .container__information {

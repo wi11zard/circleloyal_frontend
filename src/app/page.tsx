@@ -8,6 +8,7 @@ import Information from "../components/information/information";
 import styles from "./page.module.scss"
 import { useState } from "react";
 import { useEffect } from "react";
+import bg_card from "../assets/background-card.png"
 
 export default function Home() {
   const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
@@ -129,8 +130,8 @@ export default function Home() {
             <div className={styles.main__union}>
               <Image src={"/images/union.svg"} alt="" width={0} height={0}></Image>
             </div>
-             <div className={styles.main__background}>
-              <Image src={"/images/background.png"} alt="" width={650} height={650}></Image>
+            <div className={styles.main__background}>
+              <Image src={bg_card} alt=""></Image>
             </div>
             <div className={styles.main__information}>
               <div className={styles.main__ID}>

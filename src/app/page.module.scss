@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: $color-beige3;
 
   &__container {
     display: flex;
@@ -189,11 +190,7 @@
     border-radius: 16px;
     width: 90%;
     overflow: hidden;
-    background: linear-gradient(
-      90deg,
-      $color-dark-blue 27%,
-      $color-blackish 100%
-    );
+    background: linear-gradient(90deg, #0d0d29 27%, #040306 100%);
     box-shadow: inset 0px 0px 24px 4px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0px 0px 24px 4px rgba(0, 0, 0, 0.5);
   }
@@ -427,6 +424,7 @@
     border-radius: 15px;
     width: 37%;
     height: 100%;
+    background-color: $color-beige3;
 
     @media (max-width: 880px) {
       flex-direction: row;
