@@ -161,30 +161,30 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.main__options}>
-            <div className={styles.main__item2}>
+            <button onClick={() => setIsTransferModalOpen(true)} className={styles.main__item2}>
               <div className={styles.main__icon2}>
                 <Image src={"/images/translation.svg"} alt="" width={50} height={50}></Image>
               </div>
-              <button onClick={() => setIsTransferModalOpen(true)}  className={styles.main__translation}>Переводы</button>
-            </div>
-            <div className={styles.main__item2}>
+              <button  className={styles.main__translation}>Переводы</button>
+            </button>
+            <button onClick={() => setIsTransferModalOpen(true)} className={styles.main__item2}>
               <div className={styles.main__icon2}>
                 <Image src={"/images/refferals.svg"} alt="" width={50} height={50}></Image>
               </div>
               <Link className={styles.main__translation} href={"/"}>Рефералы</Link>
-            </div>
-            <div className={styles.main__item2}>
+            </button>
+            <button onClick={() => setIsTransferModalOpen(true)} className={styles.main__item2}>
               <div className={styles.main__icon2}>
                 <Image src={"/images/settings.svg"} alt="" width={50} height={50}></Image>
               </div>
                <Link className={styles.main__translation} href={"/"}>Настройки</Link>
-            </div>
-            <div className={styles.main__item2}>
+            </button>
+            <button onClick={() => setIsTransferModalOpen(true)} className={styles.main__item2}>
               <div className={styles.main__icon2}>
                 <Image src={"/images/cashback.svg"} alt="" width={50} height={50}></Image>
               </div>
               <Link className={styles.main__translation} href={"/"}>Кешбек</Link>
-            </div>
+            </button>
           </div>
         </div> 
 

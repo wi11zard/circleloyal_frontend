@@ -15,9 +15,11 @@
     rgba(19, 19, 57, 1) 50%,
     rgba(4, 3, 6, 1) 89%
   );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  margin-top: 5%;
   padding-top: 2%;
 
   @media (max-width: 700px) {
