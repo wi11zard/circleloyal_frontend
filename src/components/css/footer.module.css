@@ -16,9 +16,11 @@
   background: #040306;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgb(4, 3, 6)), color-stop(50%, rgb(19, 19, 57)), color-stop(89%, rgb(4, 3, 6)));
   background: linear-gradient(180deg, rgb(4, 3, 6) 10%, rgb(19, 19, 57) 50%, rgb(4, 3, 6) 89%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  margin-top: 5%;
   padding-top: 2%;
 }
 @media (max-width: 700px) {
